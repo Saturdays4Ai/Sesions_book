@@ -1,0 +1,7 @@
+# - file: README
+- file: docs/intro
+  sections:
+    - file: docs/Sesion2_1
+    - file: docs/Sesion2_2-Operadores
+    - file: docs/Sesion2_3-Operadores2
+    - file: docs/Sesion2_4-Ejercicios
