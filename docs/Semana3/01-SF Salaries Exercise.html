@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SF Salaries Exercise &#8212; Saturdays4Ai</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Enunciado Ecommerce Purchases" href="03-Ecommerce_Purchases_Exercise.html" />
+    <link rel="prev" title="Sesion 2 - Fibonacci" href="../Sesion2/Sesion2_4-Ejercicios.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Saturdays4Ai</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/%5BCondicionales%5D_Ejercicios_con_soluciones.html">
+   Condicionales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/%5BListas%5D_Ejercicios_con_soluciones.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/%5BTipos_de_datos%5D_Ejercicios_con_soluciones.html">
+   Ejercicios con soluciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/Nivel_1_Beginner.html">
+   Ejercicios Nivel 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/Nivel_2_Intermediate_.html">
+   Ejercicios Nivel 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/Modulo_2_Python_Exercises.html">
+   Ejercicios sobre Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_1.html">
+   Sesion2 - Ejercicio Hello world
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_2-OperadoresMatematicos.html">
+   Sesion2 - Operadores matemáticos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_3-OperadoresLogicos.html">
+   Sesion2  - Operadores Lógicos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_4-Ejercicios.html">
+   Sesion 2 - Fibonacci
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   SF Salaries Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-Ecommerce_Purchases_Exercise.html">
+   Enunciado Ecommerce Purchases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="%5B100_Numpy_challenge%5D_Ejercicios_con_pistas.html">
+   100 ejercicios de numpy  con pistas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="%5B100_Pandas_challenge%5D_Ejercicios.html">
+   Puzzles y ejercicios de Pandas
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/Semana3/01-SF Salaries Exercise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Saturdays4Ai/Sesions_book/master?urlpath=tree/./Saturdays4Ai_book/docs/Semana3/01-SF Salaries Exercise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/Saturdays4Ai/Sesions_book/blob/master/./Saturdays4Ai_book/docs/Semana3/01-SF Salaries Exercise.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"></ul></div><p><img alt="" src="https://www.saturdays.ai/images/logo.png" /></p>
+<div class="section" id="sf-salaries-exercise">
+<h1>SF Salaries Exercise<a class="headerlink" href="#sf-salaries-exercise" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to a quick exercise for you to practice your pandas skills! We will be using the <a class="reference external" href="https://www.kaggle.com/kaggle/sf-salaries">SF Salaries Dataset</a> from Kaggle! Just follow along and complete the tasks outlined in bold below. The tasks will get harder and harder as you go along.</p>
+<p>** Import pandas as pd.**</p>
+<p>** Read Salaries.csv as a dataframe called sal.**</p>
+<p>** Check the head of the DataFrame. **</p>
+<p>** Use the .info() method to find out how many entries there are.**</p>
+<p><strong>What is the average BasePay ?</strong></p>
+<p>** What is the highest amount of OvertimePay in the dataset ? **</p>
+<p>** What is the job title of  JOSEPH DRISCOLL ? Note: Use all caps, otherwise you may get an answer that doesn’t match up (there is also a lowercase Joseph Driscoll). **</p>
+<p>** How much does JOSEPH DRISCOLL make (including benefits)? **</p>
+<p>** What is the name of highest paid person (including benefits)?**</p>
+<p>** What is the name of lowest paid person (including benefits)? Do you notice something strange about how much he or she is paid?**</p>
+<p>** What was the average (mean) BasePay of all employees per year? (2011-2014) ? **</p>
+<p>** How many unique job titles are there? **</p>
+<p>** What are the top 5 most common jobs? **</p>
+<p>** How many Job Titles were represented by only one person in 2013? (e.g. Job Titles with only one occurence in 2013?) **</p>
+<p>** How many people have the word Chief in their job title? (This is pretty tricky) **</p>
+<p>** Bonus: Is there a correlation between length of the Job Title string and Salary? **</p>
+<p><font size=6>Great Job!</font></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/Semana3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Sesion2/Sesion2_4-Ejercicios.html" title="previous page">Sesion 2 - Fibonacci</a>
+    <a class='right-next' id="next-link" href="03-Ecommerce_Purchases_Exercise.html" title="next page">Enunciado Ecommerce Purchases</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By SaturdaysAi<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

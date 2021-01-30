@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzles y ejercicios de Pandas &#8212; Saturdays4Ai</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="100 ejercicios de numpy con pistas" href="%5B100_Numpy_challenge%5D_Ejercicios_con_pistas.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Saturdays4Ai</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/%5BCondicionales%5D_Ejercicios_con_soluciones.html">
+   Condicionales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/%5BListas%5D_Ejercicios_con_soluciones.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/%5BTipos_de_datos%5D_Ejercicios_con_soluciones.html">
+   Ejercicios con soluciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/Nivel_1_Beginner.html">
+   Ejercicios Nivel 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/Nivel_2_Intermediate_.html">
+   Ejercicios Nivel 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Semana2/Modulo_2_Python_Exercises.html">
+   Ejercicios sobre Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_1.html">
+   Sesion2 - Ejercicio Hello world
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_2-OperadoresMatematicos.html">
+   Sesion2 - Operadores matemáticos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_3-OperadoresLogicos.html">
+   Sesion2  - Operadores Lógicos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sesion2/Sesion2_4-Ejercicios.html">
+   Sesion 2 - Fibonacci
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-SF%20Salaries%20Exercise.html">
+   SF Salaries Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-Ecommerce_Purchases_Exercise.html">
+   Enunciado Ecommerce Purchases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="%5B100_Numpy_challenge%5D_Ejercicios_con_pistas.html">
+   100 ejercicios de numpy  con pistas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Puzzles y ejercicios de Pandas
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/Semana3/[100_Pandas_challenge]_Ejercicios.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Saturdays4Ai/Sesions_book/master?urlpath=tree/./Saturdays4Ai_book/docs/Semana3/[100_Pandas_challenge]_Ejercicios.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/Saturdays4Ai/Sesions_book/blob/master/./Saturdays4Ai_book/docs/Semana3/[100_Pandas_challenge]_Ejercicios.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-pandas">
+   Importing pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-started-and-checking-your-pandas-setup">
+     Getting started and checking your pandas setup
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe-basics">
+   DataFrame basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-few-of-the-fundamental-routines-for-selecting-sorting-adding-and-aggregating-data-in-dataframes">
+     A few of the fundamental routines for selecting, sorting, adding and aggregating data in DataFrames
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframes-beyond-the-basics">
+   DataFrames: beyond the basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slightly-trickier-you-may-need-to-combine-two-or-more-methods-to-get-the-right-answer">
+     Slightly trickier: you may need to combine two or more methods to get the right answer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframes-harder-problems">
+   DataFrames: harder problems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#these-might-require-a-bit-of-thinking-outside-the-box">
+     These might require a bit of thinking outside the box…
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series-and-datetimeindex">
+   Series and DatetimeIndex
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-for-creating-and-manipulating-series-with-datetime-data">
+     Exercises for creating and manipulating Series with datetime data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cleaning-data">
+   Cleaning Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-a-dataframe-easier-to-work-with">
+     Making a DataFrame easier to work with
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-multiindexes">
+   Using MultiIndexes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#go-beyond-flat-dataframes-with-additional-index-levels">
+     Go beyond flat DataFrames with additional index levels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minesweeper">
+   Minesweeper
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-the-numbers-for-safe-squares-in-a-minesweeper-grid">
+     Generate the numbers for safe squares in a Minesweeper grid
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting">
+   Plotting
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualize-trends-and-patterns-in-data">
+     Visualize trends and patterns in data
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="puzzles-y-ejercicios-de-pandas">
+<h1>Puzzles y ejercicios de Pandas<a class="headerlink" href="#puzzles-y-ejercicios-de-pandas" title="Permalink to this headline">¶</a></h1>
+<p><img alt="" src="https://www.saturdays.ai/images/logo.png" /></p>
+<div class="section" id="importing-pandas">
+<h2>Importing pandas<a class="headerlink" href="#importing-pandas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="getting-started-and-checking-your-pandas-setup">
+<h3>Getting started and checking your pandas setup<a class="headerlink" href="#getting-started-and-checking-your-pandas-setup" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>easy</em></p>
+<p><strong>1.</strong> Import pandas under the name <code class="docutils literal notranslate"><span class="pre">pd</span></code>.</p>
+<p><strong>2.</strong> Print the version of pandas that has been imported.</p>
+<p><strong>3.</strong> Print out all the version information of the libraries that are required by the pandas library.</p>
+</div>
+</div>
+<div class="section" id="dataframe-basics">
+<h2>DataFrame basics<a class="headerlink" href="#dataframe-basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-few-of-the-fundamental-routines-for-selecting-sorting-adding-and-aggregating-data-in-dataframes">
+<h3>A few of the fundamental routines for selecting, sorting, adding and aggregating data in DataFrames<a class="headerlink" href="#a-few-of-the-fundamental-routines-for-selecting-sorting-adding-and-aggregating-data-in-dataframes" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>easy</em></p>
+<p>Note: remember to import numpy using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>Consider the following Python dictionary <code class="docutils literal notranslate"><span class="pre">data</span></code> and Python list <code class="docutils literal notranslate"><span class="pre">labels</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;animal&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;snake&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;snake&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+        <span class="s1">&#39;visits&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="s1">&#39;priority&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]}</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;j&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>(This is just some meaningless data I made up with the theme of animals and trips to a vet.)</p>
+<p><strong>4.</strong> Create a DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code> from this dictionary <code class="docutils literal notranslate"><span class="pre">data</span></code> which has the index <code class="docutils literal notranslate"><span class="pre">labels</span></code>.</p>
+<p><strong>5.</strong> Display a summary of the basic information about this DataFrame and its data.</p>
+<p><strong>6.</strong> Return the first 3 rows of the DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<p><strong>7.</strong> Select just the ‘animal’ and ‘age’ columns from the DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<p><strong>8.</strong> Select the data in rows <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">8]</span></code> <em>and</em> in columns <code class="docutils literal notranslate"><span class="pre">['animal',</span> <span class="pre">'age']</span></code>.</p>
+<p><strong>9.</strong> Select only the rows where the number of visits is greater than 3.</p>
+<p><strong>10.</strong> Select the rows where the age is missing, i.e. is <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.</p>
+<p><strong>11.</strong> Select the rows where the animal is a cat <em>and</em> the age is less than 3.</p>
+<p><strong>12.</strong> Select the rows the age is between 2 and 4 (inclusive).</p>
+<p><strong>13.</strong> Change the age in row ‘f’ to 1.5.</p>
+<p><strong>14.</strong> Calculate the sum of all visits (the total number of visits).</p>
+<p><strong>15.</strong> Calculate the mean age for each different animal in <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<p><strong>16.</strong> Append a new row ‘k’ to <code class="docutils literal notranslate"><span class="pre">df</span></code> with your choice of values for each column. Then delete that row to return the original DataFrame.</p>
+<p><strong>17.</strong> Count the number of each type of animal in <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
+<p><strong>18.</strong> Sort <code class="docutils literal notranslate"><span class="pre">df</span></code> first by the values in the ‘age’ in <em>decending</em> order, then by the value in the ‘visit’ column in <em>ascending</em> order.</p>
+<p><strong>19.</strong> The ‘priority’ column contains the values ‘yes’ and ‘no’. Replace this column with a column of boolean values: ‘yes’ should be <code class="docutils literal notranslate"><span class="pre">True</span></code> and ‘no’ should be <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p><strong>20.</strong> In the ‘animal’ column, change the ‘snake’ entries to ‘python’.</p>
+<p><strong>21.</strong> For each animal type and each number of visits, find the mean age. In other words, each row is an animal, each column is a number of visits and the values are the mean ages (hint: use a pivot table).</p>
+</div>
+</div>
+<div class="section" id="dataframes-beyond-the-basics">
+<h2>DataFrames: beyond the basics<a class="headerlink" href="#dataframes-beyond-the-basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="slightly-trickier-you-may-need-to-combine-two-or-more-methods-to-get-the-right-answer">
+<h3>Slightly trickier: you may need to combine two or more methods to get the right answer<a class="headerlink" href="#slightly-trickier-you-may-need-to-combine-two-or-more-methods-to-get-the-right-answer" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>medium</em></p>
+<p>The previous section was tour through some basic but essential DataFrame operations. Below are some ways that you might need to cut your data, but for which there is no single “out of the box” method.</p>
+<p><strong>22.</strong> You have a DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code> with a column ‘A’ of integers. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">]})</span>
+</pre></div>
+</div>
+<p>How do you filter out rows which contain the same integer as the row immediately above?</p>
+<p><strong>23.</strong> Given a DataFrame of numeric values, say</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span> <span class="c1"># a 5x3 frame of float values</span>
+</pre></div>
+</div>
+<p>how do you subtract the row mean from each element in the row?</p>
+<p><strong>24.</strong> Suppose you have DataFrame with 10 columns of real numbers, for example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abcdefghij&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Which column of numbers has the smallest sum? (Find that column’s label.)</p>
+<p><strong>25.</strong> How do you count how many unique rows a DataFrame has (i.e. ignore all rows that are duplicates)?</p>
+<p>The next three puzzles are slightly harder…</p>
+<p><strong>26.</strong> You have a DataFrame that consists of 10 columns of floating–point numbers. Suppose that exactly 5 entries in each row are NaN values. For each row of the DataFrame, find the <em>column</em> which contains the <em>third</em> NaN value.</p>
+<p>(You should return a Series of column labels.)</p>
+<p><strong>27.</strong> A DataFrame has a column of groups ‘grps’ and and column of numbers ‘vals’. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;grps&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;aaabbcaabcccbbc&#39;</span><span class="p">),</span> 
+                   <span class="s1">&#39;vals&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">345</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">52</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">235</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">87</span><span class="p">]})</span>
+</pre></div>
+</div>
+<p>For each <em>group</em>, find the sum of the three greatest values.</p>
+<p><strong>28.</strong> A DataFrame has two integer columns ‘A’ and ‘B’. The values in ‘A’ are between 1 and 100 (inclusive). For each group of 10 consecutive integers in ‘A’ (i.e. <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">10]</span></code>, <code class="docutils literal notranslate"><span class="pre">(10,</span> <span class="pre">20]</span></code>, …), calculate the sum of the corresponding values in column ‘B’.</p>
+</div>
+</div>
+<div class="section" id="dataframes-harder-problems">
+<h2>DataFrames: harder problems<a class="headerlink" href="#dataframes-harder-problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="these-might-require-a-bit-of-thinking-outside-the-box">
+<h3>These might require a bit of thinking outside the box…<a class="headerlink" href="#these-might-require-a-bit-of-thinking-outside-the-box" title="Permalink to this headline">¶</a></h3>
+<p>…but all are solvable using just the usual pandas/NumPy methods (and so avoid using explicit <code class="docutils literal notranslate"><span class="pre">for</span></code> loops).</p>
+<p>Difficulty: <em>hard</em></p>
+<p><strong>29.</strong> Consider a DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code> where there is an integer column ‘X’:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]})</span>
+</pre></div>
+</div>
+<p>For each value, count the difference back to the previous zero (or the start of the Series, whichever is closer). These values should therefore be <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code>. Make this a new column ‘Y’.</p>
+<p>Here’s an alternative approach based on a <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/cookbook.html#grouping">cookbook recipe</a>:</p>
+<p><strong>30.</strong> Consider a DataFrame containing rows and columns of purely numerical data. Create a list of the row-column index locations of the 3 largest values.</p>
+<p><strong>31.</strong> Given a DataFrame with a column of group IDs, ‘grps’, and a column of corresponding integer values, ‘vals’, replace any negative values in ‘vals’ with the group mean.</p>
+<p><strong>32.</strong> Implement a rolling mean over groups with window size 3, which ignores NaN value. For example consider the following DataFrame:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;group&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;aabbabbbabab&#39;</span><span class="p">),</span>
+<span class="go">                       &#39;value&#39;: [1, 2, 3, np.nan, 2, 3, </span>
+<span class="go">                                 np.nan, 1, 7, 3, np.nan, 8]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
+<span class="go">   group  value</span>
+<span class="go">0      a    1.0</span>
+<span class="go">1      a    2.0</span>
+<span class="go">2      b    3.0</span>
+<span class="go">3      b    NaN</span>
+<span class="go">4      a    2.0</span>
+<span class="go">5      b    3.0</span>
+<span class="go">6      b    NaN</span>
+<span class="go">7      b    1.0</span>
+<span class="go">8      a    7.0</span>
+<span class="go">9      b    3.0</span>
+<span class="go">10     a    NaN</span>
+<span class="go">11     b    8.0</span>
+</pre></div>
+</div>
+<p>The goal is to compute the Series:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>     <span class="mf">1.000000</span>
+<span class="mi">1</span>     <span class="mf">1.500000</span>
+<span class="mi">2</span>     <span class="mf">3.000000</span>
+<span class="mi">3</span>     <span class="mf">3.000000</span>
+<span class="mi">4</span>     <span class="mf">1.666667</span>
+<span class="mi">5</span>     <span class="mf">3.000000</span>
+<span class="mi">6</span>     <span class="mf">3.000000</span>
+<span class="mi">7</span>     <span class="mf">2.000000</span>
+<span class="mi">8</span>     <span class="mf">3.666667</span>
+<span class="mi">9</span>     <span class="mf">2.000000</span>
+<span class="mi">10</span>    <span class="mf">4.500000</span>
+<span class="mi">11</span>    <span class="mf">4.000000</span>
+</pre></div>
+</div>
+<p>E.g. the first window of size three for group ‘b’ has values 3.0, NaN and 3.0 and occurs at row index 5. Instead of being NaN the value in the new column at this row index should be 3.0 (just the two non-NaN values are used to compute the mean (3+3)/2)</p>
+</div>
+</div>
+<div class="section" id="series-and-datetimeindex">
+<h2>Series and DatetimeIndex<a class="headerlink" href="#series-and-datetimeindex" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercises-for-creating-and-manipulating-series-with-datetime-data">
+<h3>Exercises for creating and manipulating Series with datetime data<a class="headerlink" href="#exercises-for-creating-and-manipulating-series-with-datetime-data" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>easy/medium</em></p>
+<p>pandas is fantastic for working with dates and times. These puzzles explore some of this functionality.</p>
+<p><strong>33.</strong> Create a DatetimeIndex that contains each business day of 2015 and use it to index a Series of random numbers. Let’s call this Series <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<p><strong>34.</strong> Find the sum of the values in <code class="docutils literal notranslate"><span class="pre">s</span></code> for every Wednesday.</p>
+<p><strong>35.</strong> For each calendar month in <code class="docutils literal notranslate"><span class="pre">s</span></code>, find the mean of values.</p>
+<p><strong>36.</strong> For each group of four consecutive calendar months in <code class="docutils literal notranslate"><span class="pre">s</span></code>, find the date on which the highest value occurred.</p>
+<p><strong>37.</strong> Create a DateTimeIndex consisting of the third Thursday in each month for the years 2015 and 2016.</p>
+</div>
+</div>
+<div class="section" id="cleaning-data">
+<h2>Cleaning Data<a class="headerlink" href="#cleaning-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="making-a-dataframe-easier-to-work-with">
+<h3>Making a DataFrame easier to work with<a class="headerlink" href="#making-a-dataframe-easier-to-work-with" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>easy/medium</em></p>
+<p>It happens all the time: someone gives you data containing malformed strings, Python, lists and missing data. How do you tidy it up so you can get on with the analysis?</p>
+<p>Take this monstrosity as the DataFrame to use in the following puzzles:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;From_To&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LoNDon_paris&#39;</span><span class="p">,</span> <span class="s1">&#39;MAdrid_miLAN&#39;</span><span class="p">,</span> <span class="s1">&#39;londON_StockhOlm&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;Budapest_PaRis&#39;</span><span class="p">,</span> <span class="s1">&#39;Brussels_londOn&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;FlightNumber&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10045</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">10065</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">10085</span><span class="p">],</span>
+              <span class="s1">&#39;RecentDelays&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">47</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">87</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">67</span><span class="p">,</span> <span class="mi">32</span><span class="p">]],</span>
+                   <span class="s1">&#39;Airline&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;KLM(!)&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;Air France&gt; (12)&#39;</span><span class="p">,</span> <span class="s1">&#39;(British Airways. )&#39;</span><span class="p">,</span> 
+                               <span class="s1">&#39;12. Air France&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;Swiss Air&quot;&#39;</span><span class="p">]})</span>
+</pre></div>
+</div>
+<p>(It’s some flight data I made up; it’s not meant to be accurate in any way.)</p>
+<p><strong>38.</strong> Some values in the the FlightNumber column are missing. These numbers are meant to increase by 10 with each row so 10055 and 10075 need to be put in place. Fill in these missing numbers and make the column an integer column (instead of a float column).</p>
+<p><strong>39.</strong> The From_To column would be better as two separate columns! Split each string on the underscore delimiter <code class="docutils literal notranslate"><span class="pre">_</span></code> to give a new temporary DataFrame with the correct values. Assign the correct column names to this temporary DataFrame.</p>
+<p><strong>40.</strong> Notice how the capitalisation of the city names is all mixed up in this temporary DataFrame. Standardise the strings so that only the first letter is uppercase (e.g. “londON” should become “London”.)</p>
+<p><strong>41.</strong> Delete the From_To column from <code class="docutils literal notranslate"><span class="pre">df</span></code> and attach the temporary DataFrame from the previous questions.</p>
+<p><strong>42</strong>. In the Airline column, you can see some extra puctuation and symbols have appeared around the airline names. Pull out just the airline name. E.g. <code class="docutils literal notranslate"><span class="pre">'(British</span> <span class="pre">Airways.</span> <span class="pre">)'</span></code> should become <code class="docutils literal notranslate"><span class="pre">'British</span> <span class="pre">Airways'</span></code>.</p>
+<p><strong>43</strong>. In the RecentDelays column, the values have been entered into the DataFrame as a list. We would like each first value in its own column, each second value in its own column, and so on. If there isn’t an Nth value, the value should be NaN.</p>
+<p>Expand the Series of lists into a DataFrame named <code class="docutils literal notranslate"><span class="pre">delays</span></code>, rename the columns <code class="docutils literal notranslate"><span class="pre">delay_1</span></code>, <code class="docutils literal notranslate"><span class="pre">delay_2</span></code>, etc. and replace the unwanted RecentDelays column in <code class="docutils literal notranslate"><span class="pre">df</span></code> with <code class="docutils literal notranslate"><span class="pre">delays</span></code>.</p>
+<p>The DataFrame should look much better now.</p>
+</div>
+</div>
+<div class="section" id="using-multiindexes">
+<h2>Using MultiIndexes<a class="headerlink" href="#using-multiindexes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="go-beyond-flat-dataframes-with-additional-index-levels">
+<h3>Go beyond flat DataFrames with additional index levels<a class="headerlink" href="#go-beyond-flat-dataframes-with-additional-index-levels" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>medium</em></p>
+<p>Previous exercises have seen us analysing data from DataFrames equipped with a single index level. However, pandas also gives you the possibilty of indexing your data using <em>multiple</em> levels. This is very much like adding new dimensions to a Series or a DataFrame. For example, a Series is 1D, but by using a MultiIndex with 2 levels we gain of much the same functionality as a 2D DataFrame.</p>
+<p>The set of puzzles below explores how you might use multiple index levels to enhance data analysis.</p>
+<p>To warm up, we’ll look make a Series with two index levels.</p>
+<p><strong>44</strong>. Given the lists <code class="docutils literal notranslate"><span class="pre">letters</span> <span class="pre">=</span> <span class="pre">['A',</span> <span class="pre">'B',</span> <span class="pre">'C']</span></code> and <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">list(range(10))</span></code>, construct a MultiIndex object from the product of the two lists. Use it to index a Series of random numbers. Call this Series <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<p><strong>45.</strong> Check the index of <code class="docutils literal notranslate"><span class="pre">s</span></code> is lexicographically sorted (this is a necessary proprty for indexing to work correctly with a MultiIndex).</p>
+<p><strong>46</strong>. Select the labels <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">6</span></code> from the second level of the MultiIndexed Series.</p>
+<p><strong>47</strong>. Slice the Series <code class="docutils literal notranslate"><span class="pre">s</span></code>; slice up to label ‘B’ for the first level and from label 5 onwards for the second level.</p>
+<p><strong>48</strong>. Sum the values in <code class="docutils literal notranslate"><span class="pre">s</span></code> for each label in the first level (you should have Series giving you a total for labels A, B and C).</p>
+<p><strong>49</strong>. Suppose that <code class="docutils literal notranslate"><span class="pre">sum()</span></code> (and other methods) did not accept a <code class="docutils literal notranslate"><span class="pre">level</span></code> keyword argument. How else could you perform the equivalent of <code class="docutils literal notranslate"><span class="pre">s.sum(level=1)</span></code>?</p>
+<p><strong>50</strong>. Exchange the levels of the MultiIndex so we have an index of the form (letters, numbers). Is this new Series properly lexsorted? If not, sort it.</p>
+</div>
+</div>
+<div class="section" id="minesweeper">
+<h2>Minesweeper<a class="headerlink" href="#minesweeper" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generate-the-numbers-for-safe-squares-in-a-minesweeper-grid">
+<h3>Generate the numbers for safe squares in a Minesweeper grid<a class="headerlink" href="#generate-the-numbers-for-safe-squares-in-a-minesweeper-grid" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>medium</em> to <em>hard</em></p>
+<p>If you’ve ever used an older version of Windows, there’s a good chance you’ve played with [Minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game). If you’re not familiar with the game, imagine a grid of squares: some of these squares conceal a mine. If you click on a mine, you lose instantly. If you click on a safe square, you reveal a number telling you how many mines are found in the squares that are immediately adjacent. The aim of the game is to uncover all squares in the grid that do not contain a mine.</p>
+<p>In this section, we’ll make a DataFrame that contains the necessary data for a game of Minesweeper: coordinates of the squares, whether the square contains a mine and the number of mines found on adjacent squares.</p>
+<p><strong>51</strong>. Let’s suppose we’re playing Minesweeper on a 5 by 4 grid, i.e.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>To begin, generate a DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code> with two columns, <code class="docutils literal notranslate"><span class="pre">'x'</span></code> and <code class="docutils literal notranslate"><span class="pre">'y'</span></code> containing every coordinate for this grid. That is, the DataFrame should start:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">x</span>  <span class="n">y</span>
+<span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">1</span>
+<span class="mi">2</span>  <span class="mi">0</span>  <span class="mi">2</span>
+</pre></div>
+</div>
+<p><strong>52</strong>. For this DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code>, create a new column of zeros (safe) and ones (mine). The probability of a mine occuring at each location should be 0.4.</p>
+<p><strong>53</strong>. Now create a new column for this DataFrame called <code class="docutils literal notranslate"><span class="pre">'adjacent'</span></code>. This column should contain the number of mines found on adjacent squares in the grid.</p>
+<p>(E.g. for the first row, which is the entry for the coordinate <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code>, count how many mines are found on the coordinates <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">1)</span></code>, <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">0)</span></code> and <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code>.)</p>
+<p><strong>54</strong>. For rows of the DataFrame that contain a mine, set the value in the <code class="docutils literal notranslate"><span class="pre">'adjacent'</span></code> column to NaN.</p>
+<p><strong>55</strong>. Finally, convert the DataFrame to grid of the adjacent mine counts: columns are the <code class="docutils literal notranslate"><span class="pre">x</span></code> coordinate, rows are the <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinate.</p>
+</div>
+</div>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="visualize-trends-and-patterns-in-data">
+<h3>Visualize trends and patterns in data<a class="headerlink" href="#visualize-trends-and-patterns-in-data" title="Permalink to this headline">¶</a></h3>
+<p>Difficulty: <em>medium</em></p>
+<p>To really get a good understanding of the data contained in your DataFrame, it is often essential to create plots: if you’re lucky, trends and anomalies will jump right out at you. This functionality is baked into pandas and the puzzles below explore some of what’s possible with the library.</p>
+<p><strong>56.</strong> Pandas is highly integrated with the plotting library matplotlib, and makes plotting DataFrames very user-friendly! Plotting in a notebook environment usually makes use of the following boilerplate:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>matplotlib is the plotting library which pandas’ plotting functionality is built upon, and it is usually aliased to <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> tells the notebook to show plots inline, instead of creating them in a separate window.</p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.style.use('ggplot')</span></code> is a style theme that most people find agreeable, based upon the styling of R’s ggplot package.</p>
+<p>For starters, make a scatter plot of this random data, but use black X’s instead of the default markers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.DataFrame({&quot;xs&quot;:[1,5,2,8,1],</span> <span class="pre">&quot;ys&quot;:[4,2,1,9,6]})</span></code></p>
+<p>Consult the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html">documentation</a> if you get stuck!</p>
+<p><strong>57.</strong> Columns in your DataFrame can also be used to modify colors and sizes.  Bill has been keeping track of his performance at work over time, as well as how good he was feeling that day, and whether he had a cup of coffee in the morning.  Make a plot which incorporates all four features of this DataFrame.</p>
+<p>(Hint:  If you’re having trouble seeing the plot, try multiplying the Series which you choose to represent size by 10 or more)</p>
+<p><em>The chart doesn’t have to be pretty: this isn’t a course in data viz!</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;productivity&quot;</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+                   <span class="s2">&quot;hours_in&quot;</span>    <span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                   <span class="s2">&quot;happiness&quot;</span>   <span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+                   <span class="s2">&quot;caffienated&quot;</span> <span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]})</span>
+</pre></div>
+</div>
+<p><strong>58.</strong>  What if we want to plot multiple things?  Pandas allows you to pass in a matplotlib <em>Axis</em> object for plots, and plots will also return an Axis object.</p>
+<p>Make a bar plot of monthly revenue with a line plot of monthly advertising spending (numbers in millions)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;revenue&quot;</span><span class="p">:[</span><span class="mi">57</span><span class="p">,</span><span class="mi">68</span><span class="p">,</span><span class="mi">63</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">47</span><span class="p">,</span><span class="mi">52</span><span class="p">],</span>
+                   <span class="s2">&quot;advertising&quot;</span><span class="p">:[</span><span class="mf">2.1</span><span class="p">,</span><span class="mf">1.9</span><span class="p">,</span><span class="mf">2.7</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">3.6</span><span class="p">,</span><span class="mf">3.2</span><span class="p">,</span><span class="mf">2.7</span><span class="p">,</span><span class="mf">2.4</span><span class="p">,</span><span class="mf">1.8</span><span class="p">,</span><span class="mf">1.6</span><span class="p">,</span><span class="mf">1.3</span><span class="p">,</span><span class="mf">1.9</span><span class="p">],</span>
+                   <span class="s2">&quot;month&quot;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+                  <span class="p">})</span>
+</pre></div>
+</div>
+<p>Now we’re finally ready to create a candlestick chart, which is a very common tool used to analyze stock price data.  A candlestick chart shows the opening, closing, highest, and lowest price for a stock during a time window.  The color of the “candle” (the thick part of the bar) is green if the stock closed above its opening price, or red if below.</p>
+<p><img alt="Candlestick Example" src="docs/Semana3/img/candle.jpg" /></p>
+<p>This was initially designed to be a pandas plotting challenge, but it just so happens that this type of plot is just not feasible using pandas’ methods.  If you are unfamiliar with matplotlib, we have provided a function that will plot the chart for you so long as you can use pandas to get the data into the correct format.</p>
+<p>Your first step should be to get the data in the correct format using pandas’ time-series grouping function.  We would like each candle to represent an hour’s worth of data.  You can write your own aggregation function which returns the open/high/low/close, but pandas has a built-in which also does this.</p>
+<p>The below cell contains helper functions.  Call <code class="docutils literal notranslate"><span class="pre">day_stock_data()</span></code> to generate a DataFrame containing the prices a hypothetical stock sold for, and the time the sale occurred.  Call <code class="docutils literal notranslate"><span class="pre">plot_candlestick(df)</span></code> on your properly aggregated and formatted stock data to print the candlestick chart.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">float_to_time</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="k">1</span> * 60)).zfill(2) + &quot;:&quot; + str(int(x*60 % 1 * 60)).zfill(2)
+
+<span class="k">def</span> <span class="nf">day_stock_data</span><span class="p">():</span>
+    <span class="c1">#NYSE is open from 9:30 to 4:00</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="mf">9.5</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[(</span><span class="n">float_to_time</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">price</span><span class="p">)]</span>
+    <span class="k">while</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">:</span>
+        <span class="n">elapsed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="o">.</span><span class="mi">001</span><span class="p">)</span>
+        <span class="n">time</span> <span class="o">+=</span> <span class="n">elapsed</span>
+        <span class="k">if</span> <span class="n">time</span> <span class="o">&gt;</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">price_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">.</span><span class="mi">999</span><span class="p">,</span> <span class="mf">1.001</span><span class="p">)</span>
+        <span class="n">price</span> <span class="o">*=</span> <span class="n">price_diff</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">float_to_time</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">price</span><span class="p">))</span>
+    
+    
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;price&#39;</span><span class="p">])</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1">#Don&#39;t read me unless you get stuck!</span>
+<span class="k">def</span> <span class="nf">plot_candlestick</span><span class="p">(</span><span class="n">agg</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    agg is a DataFrame which has a DatetimeIndex and five columns: [&quot;open&quot;,&quot;high&quot;,&quot;low&quot;,&quot;close&quot;,&quot;color&quot;]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">agg</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">agg</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">time</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;high&quot;</span><span class="p">,</span><span class="s2">&quot;low&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">agg</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">time</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;open&quot;</span><span class="p">,</span><span class="s2">&quot;close&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">agg</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">time</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Price&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Hour&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;OHLC of Stock Value During Trading Day&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>59.</strong> Generate a day’s worth of random stock data, and aggregate / reformat it so that it has hourly summaries of the opening, highest, lowest, and closing prices</p>
+<p><strong>60.</strong> Now that you have your properly-formatted data, try to plot it yourself as a candlestick chart.  Use the <code class="docutils literal notranslate"><span class="pre">plot_candlestick(df)</span></code> function above, or matplotlib’s <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">plot</span></code> documentation</a> if you get stuck.</p>
+<p><em>More exercises to follow soon…</em></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/Semana3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="%5B100_Numpy_challenge%5D_Ejercicios_con_pistas.html" title="previous page">100 ejercicios de numpy  con pistas</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By SaturdaysAi<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
