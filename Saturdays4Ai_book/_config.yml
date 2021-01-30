@@ -5,7 +5,7 @@
 
 #######################################################################################
 # Book settings
-title                       : El Mejor book  # The title of the book. Will be placed in the left navbar.
-author                      : Daniel G Teba  # The author of the book
+title                       : Saturdays4Ai  # The title of the book. Will be placed in the left navbar.
+author                      : SaturdaysAi  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
