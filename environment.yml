@@ -1,4 +1,4 @@
-name: qe-mini-example
+name: sat4Aibook
 channels:
   - default
 dependencies:
