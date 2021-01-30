@@ -1,16 +1,16 @@
-file: docs/intro
-sections:
-- file: docs/Semana2/[Condicionales]_Ejercicios_con_soluciones
-- file: docs/Semana2/[Listas]_Ejercicios_con_soluciones
-- file: docs/Semana2/[Tipos_de_datos]_Ejercicios_con_soluciones
-- file: docs/Semana2/Nivel_1_Beginner
-- file: docs/Semana2/Nivel_2_Intermediate_
-- file: docs/Semana2/Modulo_2_Python_Exercises
-- file: docs/Sesion2/Sesion2_1
-- file: docs/Sesion2/Sesion2_2-OperadoresMatematicos
-- file: docs/Sesion2/Sesion2_3-OperadoresLogicos
-- file: docs/Sesion2/Sesion2_4-Ejercicios
-- file: docs/Semana3/01-SF Salaries Exercise
-- file: docs/Semana3/03-Ecommerce_Purchases_Exercise
-- file: docs/Semana3/[100_Numpy_challenge]_Ejercicios_con_pistas
-- file: docs/Semana3/[100_Pandas_challenge]_Ejercicios
+- file: docs/intro
+  sections:
+    - file: docs/Semana2/[Condicionales]_Ejercicios_con_soluciones
+    - file: docs/Semana2/[Listas]_Ejercicios_con_soluciones
+    - file: docs/Semana2/[Tipos_de_datos]_Ejercicios_con_soluciones
+    - file: docs/Semana2/Nivel_1_Beginner
+    - file: docs/Semana2/Nivel_2_Intermediate_
+    - file: docs/Semana2/Modulo_2_Python_Exercises
+    - file: docs/Sesion2/Sesion2_1
+    - file: docs/Sesion2/Sesion2_2-OperadoresMatematicos
+    - file: docs/Sesion2/Sesion2_3-OperadoresLogicos
+    - file: docs/Sesion2/Sesion2_4-Ejercicios
+    - file: docs/Semana3/01-SF Salaries Exercise
+    - file: docs/Semana3/03-Ecommerce_Purchases_Exercise
+    - file: docs/Semana3/[100_Numpy_challenge]_Ejercicios_con_pistas
+    - file: docs/Semana3/[100_Pandas_challenge]_Ejercicios
